@@ -1,0 +1,42 @@
+scope: vega
+data_root: ''
+weights_dir: weights/files
+manifests: manifests
+grouping: primary
+subset: null
+source_embeddings: cache/embeddings
+external_embeddings: cache/external
+external_manifest: manifests/external/slices.csv
+external_root: ''
+encoders: [resnet18, resnet50, dinov2_s, biomedclip]
+encoder: resnet18
+tasks: [AD, PD]
+folds: [0, 1, 2, 3, 4]
+seeds: [5101, 5102, 5103]
+train_clusters: [0, 1, 2]
+C_grid: [0.01, 0.1, 1.0]
+max_iter: 1000
+e2_folds: 5
+budgets: [0, 4, 8, 16, 32]
+draws: 20
+bootstrap_draws: 2000
+permutation_draws: 2000
+ixi_split_seed: 7101
+jobs: 8
+threads_per_fit: 1
+seed: 5101
+threads: 4
+workers: 4
+batch_size: 128
+device: cuda
+output: results/p2_external
+
+# Iteration 2: score-blind secondary subset; full IXI remains primary.
+external_subjects: manifests/external/subjects.csv
+age_matched_secondary: true
+age_match_caliper: 5.0
+
+# Iteration 3 amendment, fixed before external AD outcomes.
+ad_external: true
+ad_split_seed: 7201
+ad_contrast_k: 8

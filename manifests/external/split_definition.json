@@ -1,0 +1,18 @@
+{
+  "scope": "precomputed subject split definitions; no model fits",
+  "e2_folds": 5,
+  "seeds": [
+    5101,
+    5102,
+    5103
+  ],
+  "ixi_split_seed": 7101,
+  "slice_manifest_sha256": "84b4d27295361fb6a66d47019dfd1277f39778f62b930b585e01b8297ebba428",
+  "role_code_sha256": "399130b451d816e32ad29d49e3657b0b7c16c6609929547f1a6b8f2db297cb93",
+  "age_matching_code_sha256": "8da88f74a516350bc3c187ea737b043c66a4af6015b9f1fbd7b846b3638d0726",
+  "age_match_caliper": 5.0,
+  "e2_roles_sha256": "e010898e56ade046ec457835a860a66106e0f66492ec9f927903f80b357a41bb",
+  "ixi_roles_sha256": "0b8a70fd1cd910ec7fcc8ffbf831536ff2471f3e398e626adc55357e856d5e0c",
+  "ad_split_seed": 7201,
+  "ad_roles_sha256": "51af9893b251dba91155689ecede1f19dca63b3a9815f7d8eb5a78e484d38fab"
+}

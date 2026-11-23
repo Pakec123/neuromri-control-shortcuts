@@ -1,0 +1,95 @@
+{
+  "verified_date": "2026-11-19",
+  "record": "https://zenodo.org/records/3935636",
+  "api": "https://zenodo.org/api/records/3935636",
+  "doi": "10.5281/zenodo.3935636",
+  "creators": [
+    "Ariadna Besga",
+    "Manuel Graña",
+    "Darya Chyzhyk"
+  ],
+  "license": "CC BY 4.0",
+  "publisher_md5": {
+    "Clinical_data.zip": "bd3be66784774b6d1b3abb61dbee5dc2",
+    "T1_preprocessed.zip": "eb5e39011f533a1a06966beb8379db7c"
+  },
+  "diagnosis_mapping": {
+    "ea": "AD",
+    "crl": "control",
+    "tb": "bipolar_excluded"
+  },
+  "clinical_table": "clinical_data_id_age_gender.csv",
+  "clinical_counts": {
+    "AD": 35,
+    "control": 19,
+    "bipolar_excluded": 24
+  },
+  "gender": "Numeric codes 1/2 retained verbatim. Code meanings absent from record/CSV; decoded sex missing, no guessed M/F mapping.",
+  "recruitment_publication": "https://doi.org/10.3389/fnagi.2017.00179",
+  "clinical_criteria_publication": "https://doi.org/10.3389/fnagi.2015.00231",
+  "recruitment": "Alava University Hospital, Vitoria, Spain",
+  "ad_definition_in_linked_study": "Probable AD by NINDS-ADRDA (as reported in the 2015 paper); no biomarker-confirmed label asserted",
+  "study_scanner": "1.5T Siemens Magnetom Avanto reported for DWI in the 2017 paper; T1-specific scanner parameters not verified",
+  "t1_acquisition": "T1-weighted per publisher; no released DICOM/JSON TR/TE/flip-angle/site sidecars verified",
+  "publisher_processing": "Record claims FSL nonlinear MNI 1mm T1; archive inspection contradicts the stated layout. See observed_archive.",
+  "derivation": "Linked papers describe local Alava recruitment, not ADNI/OASIS derivation. Evidence supports separate cohort origin.",
+  "overlap_limit": "NeuroMRI AD is described in shared project context as OASIS-derived via Kaggle; patient IDs are unavailable. Neither absence of individual overlap nor every ancestral Kaggle source can be certified. No claim of a completed cross-dataset patient linkage audit.",
+  "overlap_handling": "Do not claim certified patient independence. If ADNI/OASIS derivation is later found, exclude E4 from independent-cohort claims and label it a non-independent transport sensitivity analysis.",
+  "preprocessing_difference": "Use released warped bias-corrected full T1 at 1.5mm. Canonical RAS voxel reorder only; no world-grid interpolation or registration. Same SynthStrip/mask-relative band/intensity rules/RGB224; 5mm crop margin rounded up to 4 voxels=6mm. Inherited upstream warp/bias correction/brain processing and spacing remain domain differences.",
+  "optional_mci": "figshare 30850301 deferred; MCI never relabelled AD",
+  "redistribution": "Metadata/hashes only; no images distributed",
+  "observed_archive": {
+    "T1_original": 78,
+    "T1_preprocessed_SPM_1.5mm/T1_brain": 78,
+    "selected_variant": "T1_preprocessed_SPM_1.5mm/T1_brain/wmrf<crl|ea|tb>_<id>.nii",
+    "selected_header_sample": {
+      "subject": "ea_217",
+      "shape": [
+        121,
+        145,
+        121
+      ],
+      "voxel_mm": [
+        1.5,
+        1.5,
+        1.5
+      ],
+      "axis_codes": "LAS",
+      "sform_code": 2,
+      "affine": [
+        [
+          -1.5,
+          0,
+          0,
+          90
+        ],
+        [
+          0,
+          1.5,
+          0,
+          -126
+        ],
+        [
+          0,
+          0,
+          1.5,
+          -72
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "description": "Warped bias corrected image"
+    },
+    "excluded_1mm_variant": "T1_preprocessed_DARTEL_1.0mm/T1_GM_sm4_1mm_dartel/swrc1f*: smoothed GM tissue maps, not full T1",
+    "original_T1_sample": "ea_217: 192x256x176, 1mm, scanner sform=1; not the registered variant",
+    "evidence": "ZIP central directory fetched via public HTTP Range; three sample NIfTI payload/header comparisons. Full inventory validated on 4090.",
+    "all_selected_full_T1_headers_verified_on_4090": 54,
+    "archive_members_manifest": "zenodo_archive_members.csv: 491 entries across both ZIPs; central directory retrieved by original public HTTP Range; tools/inspect_zenodo_archive.py reproduces from downloaded raw"
+  },
+  "publisher_md5_verified_on_4090": true,
+  "released_age_discrepancy": "Controls crl_129 and crl_139 have released age 56, despite the linked publications describing subjects older than 64. Released ages retained, not corrected or excluded."
+}

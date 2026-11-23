@@ -1,0 +1,7 @@
+* text eol=lf
+*.png binary
+*.jpg binary
+*.npy binary
+*.pth binary
+*.pt binary
+*.zip binary

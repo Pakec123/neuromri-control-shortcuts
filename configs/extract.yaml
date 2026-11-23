@@ -1,0 +1,12 @@
+scope: vega
+data_root: ''
+weights_dir: weights/files
+manifests: manifests
+encoder: resnet18
+seed: 5101
+batch_size: 128
+workers: 4
+threads: 4
+device: cuda
+output: cache/embeddings
+subset: null

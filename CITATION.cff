@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "Please cite the associated manuscript under review."
+type: software
+title: "Control-cohort shortcuts and decision-threshold reliability in deep learning for neurodegenerative MRI"
+version: "0.1.0"
+abstract: "Reproducibility code for the associated manuscript under review."
+repository-code: "https://github.com/Pakec123/neuromri-control-shortcuts"
+authors:
+  - family-names: "Simonič"
+    given-names: "Marko"
+    email: "marko.simonic@um.si"
+    orcid: "https://orcid.org/0009-0005-7145-6069"
+  - family-names: "Peršak"
+    given-names: "Tadej"
+  - family-names: "Hernavs"
+    given-names: "Jernej"
+    orcid: "https://orcid.org/0009-0001-1518-803X"
+  - family-names: "Klančnik"
+    given-names: "Simon"
+    orcid: "https://orcid.org/0000-0001-5922-3792"

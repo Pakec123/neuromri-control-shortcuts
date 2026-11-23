@@ -1,0 +1,23 @@
+{
+  "extracted_files": {
+    "NEUROCON": 172,
+    "TAOWU": 121,
+    "IXI": 581,
+    "ZENODO3935636": 79
+  },
+  "subjects": {
+    "IXI": 581,
+    "NEUROCON": 43,
+    "TAOWU": 40,
+    "ZENODO3935636": 54
+  },
+  "diagnoses": {
+    "IXI/control": 581,
+    "NEUROCON/PD": 27,
+    "NEUROCON/control": 16,
+    "TAOWU/PD": 20,
+    "TAOWU/control": 20,
+    "ZENODO3935636/AD": 35,
+    "ZENODO3935636/control": 19
+  }
+}

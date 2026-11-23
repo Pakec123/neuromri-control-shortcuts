@@ -1,0 +1,5 @@
+# Source-build tools for the pinned surfa C extensions; use --no-build-isolation.
+setuptools==75.5.0
+wheel==0.45.0
+Cython==3.0.11
+numpy==1.26.4

@@ -1,0 +1,154 @@
+schema: 1
+encoders:
+  resnet18:
+    status: available
+    backend: torchvision
+    architecture: resnet18
+    source: https://github.com/pytorch/vision
+    revision: 3ac97aa9120137381ed1060f37237e44485ac2aa
+    weights_enum: ResNet18_Weights.IMAGENET1K_V1
+    artifacts:
+    - file: resnet18-f37072fd.pth
+      url: https://download.pytorch.org/models/resnet18-f37072fd.pth
+      sha256: f37072fd47e89c5e827621c5baffa7500819f7896bbacec160b1a16c560e07ec
+    preprocessing: rgb224_pad_imagenet
+  resnet50:
+    status: available
+    backend: torchvision
+    architecture: resnet50
+    source: https://github.com/pytorch/vision
+    revision: 3ac97aa9120137381ed1060f37237e44485ac2aa
+    weights_enum: ResNet50_Weights.IMAGENET1K_V2
+    artifacts:
+    - file: resnet50-11ad3fa6.pth
+      url: https://download.pytorch.org/models/resnet50-11ad3fa6.pth
+      sha256: 11ad3fa62ca79e40addfd354a8ec4b7c75143b3038b8d2a807fbc68deab379ca
+    preprocessing: rgb224_pad_imagenet
+  densenet121:
+    status: available
+    backend: torchvision
+    architecture: densenet121
+    source: https://github.com/pytorch/vision
+    revision: 3ac97aa9120137381ed1060f37237e44485ac2aa
+    weights_enum: DenseNet121_Weights.IMAGENET1K_V1
+    artifacts:
+    - file: densenet121-a639ec97.pth
+      url: https://download.pytorch.org/models/densenet121-a639ec97.pth
+      sha256: a639ec97d7c33b07ae66f0b5fb7d0192f95a3b11b7576c66c0126c2a727c4395
+    preprocessing: rgb224_pad_imagenet
+  convnext_tiny:
+    status: available
+    backend: torchvision
+    architecture: convnext_tiny
+    source: https://github.com/pytorch/vision
+    revision: 3ac97aa9120137381ed1060f37237e44485ac2aa
+    weights_enum: ConvNeXt_Tiny_Weights.IMAGENET1K_V1
+    artifacts:
+    - file: convnext_tiny-983f1562.pth
+      url: https://download.pytorch.org/models/convnext_tiny-983f1562.pth
+      sha256: 983f1562536e84ff750a1576fb08e54de751dbf2e17c0d8a4a13704341fdcd3d
+    preprocessing: rgb224_pad_imagenet
+  efficientnet_v2_s:
+    status: available
+    backend: torchvision
+    architecture: efficientnet_v2_s
+    source: https://github.com/pytorch/vision
+    revision: 3ac97aa9120137381ed1060f37237e44485ac2aa
+    weights_enum: EfficientNet_V2_S_Weights.IMAGENET1K_V1
+    artifacts:
+    - file: efficientnet_v2_s-dd5fe13b.pth
+      url: https://download.pytorch.org/models/efficientnet_v2_s-dd5fe13b.pth
+      sha256: dd5fe13b1d60ec15317ccc8ca158186e134d3366c3dde9cb9a4e301f2dc66c74
+    preprocessing: rgb224_pad_imagenet
+  vit_b_16:
+    status: available
+    backend: torchvision
+    architecture: vit_b_16
+    source: https://github.com/pytorch/vision
+    revision: 3ac97aa9120137381ed1060f37237e44485ac2aa
+    weights_enum: ViT_B_16_Weights.IMAGENET1K_V1
+    artifacts:
+    - file: vit_b_16-c867db91.pth
+      url: https://download.pytorch.org/models/vit_b_16-c867db91.pth
+      sha256: c867db91d3e12c6cbadabb610d73c24a546bf82d8c03a9fea34f43a712ddb0e9
+    preprocessing: rgb224_pad_imagenet
+  swin_t:
+    status: available
+    backend: torchvision
+    architecture: swin_t
+    source: https://github.com/pytorch/vision
+    revision: 3ac97aa9120137381ed1060f37237e44485ac2aa
+    weights_enum: Swin_T_Weights.IMAGENET1K_V1
+    artifacts:
+    - file: swin_t-704ceda3.pth
+      url: https://download.pytorch.org/models/swin_t-704ceda3.pth
+      sha256: 704ceda373461b0a224fcdddd75cd2a5e9f8064512ed47adbddef7f343fd147b
+    preprocessing: rgb224_pad_imagenet
+  dinov2_s:
+    status: available
+    backend: dinov2
+    architecture: dinov2_vits14
+    source: https://github.com/facebookresearch/dinov2
+    revision: 7764ea0f912e53c92e82eb78a2a1631e92725fc8
+    artifacts:
+    - file: dinov2_vits14_pretrain.pth
+      url: https://dl.fbaipublicfiles.com/dinov2/dinov2_vits14/dinov2_vits14_pretrain.pth
+      sha256: b938bf1bc15cd2ec0feacfe3a1bb553fe8ea9ca46a7e1d8d00217f29aef60cd9
+    - &id001
+      file: dinov2-code.zip
+      url: https://codeload.github.com/facebookresearch/dinov2/zip/7764ea0f912e53c92e82eb78a2a1631e92725fc8
+      sha256: 04276715cddb29d45d05bff3a6fc132224dc27749b279ac98ad2ce4620e20d48
+    preprocessing: rgb224_pad_imagenet
+  dinov2_b:
+    status: available
+    backend: dinov2
+    architecture: dinov2_vitb14
+    source: https://github.com/facebookresearch/dinov2
+    revision: 7764ea0f912e53c92e82eb78a2a1631e92725fc8
+    artifacts:
+    - file: dinov2_vitb14_pretrain.pth
+      url: https://dl.fbaipublicfiles.com/dinov2/dinov2_vitb14/dinov2_vitb14_pretrain.pth
+      sha256: 0b8b82f85de91b424aded121c7e1dcc2b7bc6d0adeea651bf73a13307fad8c73
+    - *id001
+    preprocessing: rgb224_pad_imagenet
+  biomedclip:
+    status: available
+    backend: open_clip_visual
+    architecture: microsoft/BiomedCLIP-PubMedBERT_256-vit_base_patch16_224
+    source: https://huggingface.co/microsoft/BiomedCLIP-PubMedBERT_256-vit_base_patch16_224
+    revision: 9f341de24bfb00180f1b847274256e9b65a3a32e
+    artifacts:
+    - file: biomedclip-open_clip_pytorch_model.bin
+      url: https://huggingface.co/microsoft/BiomedCLIP-PubMedBERT_256-vit_base_patch16_224/resolve/9f341de24bfb00180f1b847274256e9b65a3a32e/open_clip_pytorch_model.bin
+      sha256: 52cc993c5c5ff962bd0c60931874bc001e7e9b41666a385530f4a036294576be
+    - file: biomedclip-open_clip_config.json
+      url: https://huggingface.co/microsoft/BiomedCLIP-PubMedBERT_256-vit_base_patch16_224/resolve/9f341de24bfb00180f1b847274256e9b65a3a32e/open_clip_config.json
+      sha256: 9a41f334a8c444678772c0ebb9ab854c97ab350bced3a17b803e258d39c23dc0
+    preprocessing: rgb224_pad_openclip
+    note: Image tower only; text model is neither instantiated nor fetched
+  dinov3_b:
+    status: gated_not_obtained
+    backend: null
+    artifacts: []
+    source: https://huggingface.co/facebook/dinov3-vitb16-pretrain-lvd1689m
+    revision: 5931719e67bbdb9737e363e781fb0c67687896bc
+    sha256: null
+    note: Lab must accept Meta gated license. No access requested; no fabricated hash
+      or fallback weights.
+  radimagenet:
+    status: available
+    backend: radimagenet
+    architecture: resnet50
+    artifacts:
+    - file: radimagenet-pytorch.zip
+      url: https://drive.usercontent.google.com/download?id=1RHt2GnuOYlc_gcoTETtBDSW73mFyRAtR&export=download&confirm=t
+      sha256: 63b3d4638e416f1df22a33ae0c6cdd28cb21940536f5f89b68726e087ae3058e
+    source: https://github.com/BMEII-AI/RadImageNet
+    revision: 0ce16f7375db4236e646829d1eca61cdb4282133
+    sha256: 08629f7e7bd3e29b8ee9522ca3f65ce4d010a7ddf74f0ea3c7e3f3d0bbab0734
+    download_url: https://drive.google.com/file/d/1RHt2GnuOYlc_gcoTETtBDSW73mFyRAtR/view
+    member: RadImageNet_pytorch/ResNet50.pt
+    weight_sha256: 08629f7e7bd3e29b8ee9522ca3f65ce4d010a7ddf74f0ea3c7e3f3d0bbab0734
+    preprocessing: BGR224_pad_minus1_plus1
+    note: Official PyTorch image backbone; BGR and [-1,1] normalization follow pinned
+      pytorch_example.ipynb. No classifier weights.

@@ -1,0 +1,71 @@
+{
+  "verified_date": "2026-11-19",
+  "cohorts": {
+    "NEUROCON": {
+      "page": "https://fcon_1000.projects.nitrc.org/indi/retro/parkinsons.html",
+      "license": "CC BY-NC-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+      "expected_subjects": 43,
+      "expected_PD": 27,
+      "expected_controls": 16,
+      "site": "Bucharest",
+      "files": {
+        "neurocon.tar.gz": "https://fcp-indi.s3.amazonaws.com/data/Projects/INDI/umf_pd/neurocon.tar.gz"
+      }
+    },
+    "TAOWU": {
+      "page": "https://fcon_1000.projects.nitrc.org/indi/retro/parkinsons.html",
+      "license": "CC BY-NC-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+      "expected_subjects": 40,
+      "expected_PD": 20,
+      "expected_controls": 20,
+      "site": "Beijing",
+      "files": {
+        "taowu.tar.gz": "https://fcp-indi.s3.amazonaws.com/data/Projects/INDI/umf_pd/taowu.tar.gz"
+      }
+    },
+    "IXI": {
+      "page": "https://brain-development.org/ixi-dataset/",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "sites": {
+        "HH": "Hammersmith Hospital, Philips 3T",
+        "Guys": "Guy's Hospital, Philips 1.5T",
+        "IOP": "Institute of Psychiatry, GE 1.5T"
+      },
+      "files": {
+        "IXI-T1.tar": "https://biomedic.doc.ic.ac.uk/brain-development/downloads/IXI/IXI-T1.tar",
+        "IXI.xls": "https://biomedic.doc.ic.ac.uk/brain-development/downloads/IXI/IXI.xls"
+      }
+    },
+    "ZENODO3935636": {
+      "page": "https://zenodo.org/records/3935636",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "expected_subjects": 54,
+      "expected_AD": 35,
+      "expected_controls": 19,
+      "site": "Alava",
+      "files": {
+        "Clinical_data.zip": "https://zenodo.org/records/3935636/files/Clinical_data.zip?download=1",
+        "T1_preprocessed.zip": "https://zenodo.org/records/3935636/files/T1_preprocessed.zip?download=1"
+      }
+    }
+  },
+  "blocked_needs_PI": {
+    "OASIS": {
+      "url": "https://sites.wustl.edu/oasisbrains/home/access/",
+      "requirements": "Institutional email; detailed research statement with aims, methods and variables; DUA acceptance and typed signature; access request. NITRC account additionally required for OASIS-3/4. No request submitted; historical direct archives do not override current DUA."
+    },
+    "ADNI": {
+      "url": "https://adni.loni.usc.edu/data-samples/adni-data/",
+      "requirements": "LONI IDA account; DUA acceptance; institutional affiliation and proposed uses; online application and committee approval; annual account update. No request submitted."
+    },
+    "MIRIAD": {
+      "url": "https://www.ucl.ac.uk/brain-sciences/ion/research/research-centres/dementia-research-centre/research-clinical-trials/minimal-interval-resonance-imaging-alzheimers-disease-miriad",
+      "requirements": "XNAT registration/login and dataset data-use agreement, including restrictions on redistribution. No registration attempted."
+    }
+  },
+  "AD_search_conclusion": "Iteration 3 integrates Zenodo 3935636 AD/control as E4; see zenodo3935636_provenance.json. Figshare MCI is optional/deferred; OASIS/ADNI/MIRIAD remain DUA-blocked."
+}

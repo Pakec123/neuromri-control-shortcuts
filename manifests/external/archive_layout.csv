@@ -1,0 +1,4 @@
+cohort,archive,sha256,members,files,t1_volumes,functional_volumes,other_files
+NEUROCON,neurocon.tar.gz,d33a60bebb1b24986a6ca62151619377ab690ca113ab458d1d9835a5e55d752c,387,257,43,85,129
+TAOWU,taowu.tar.gz,d2fdd980450f881bd45a2f59422ba825f3da65aa0636d061a2292b8a9b149ae7,282,161,40,40,81
+IXI,IXI-T1.tar,56bbe911fbe967f7d1b830a552995263bdba281e0a6eb78e62f1c38d88a946a9,581,581,581,0,0

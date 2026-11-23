@@ -1,0 +1,35 @@
+Bootstrap: docker
+From: pytorch/pytorch@sha256:14611869895df612b7b07227d5925f30ec3cd6673bad58ce3d84ed107950e014
+# devel variant of torch 2.5.1 / CUDA 12.4 (matching the analysis CUDA release): surfa compiles from source and needs gcc
+
+%files
+    env/requirements.lock /opt/neuromri/requirements.lock
+    env/external.requirements.lock /opt/neuromri/external.requirements.lock
+    env/external.build.lock /opt/neuromri/external.build.lock
+
+%post
+    set -eu
+    python -m pip install --no-cache-dir -r /opt/neuromri/requirements.lock
+    command -v gcc
+    python -m pip install --no-cache-dir --no-deps -r /opt/neuromri/external.build.lock
+    python -m pip install --no-cache-dir --no-deps --no-build-isolation -r /opt/neuromri/external.requirements.lock
+    python -m pip check > /opt/neuromri/pip-check.txt 2>&1 || true
+    if grep -v -e '^ninja .* is not supported on this platform' -e '^No broken requirements found' /opt/neuromri/pip-check.txt | grep -q .; then
+        cat /opt/neuromri/pip-check.txt; exit 1
+    fi
+    python -m pip freeze > /opt/neuromri/pip-freeze.txt
+
+%environment
+    export CUBLAS_WORKSPACE_CONFIG=:4096:8
+    export PYTHONHASHSEED=0
+    export XFORMERS_DISABLED=1
+    export HF_HUB_OFFLINE=1
+    export TRANSFORMERS_OFFLINE=1
+    export OMP_NUM_THREADS=4
+    export MKL_NUM_THREADS=4
+
+%labels
+    Description NeuroMRI external validation; separate SIF preserving P1/P2 environment
+
+%test
+    python -c "import torch,nibabel,surfa,xlrd; assert torch.__version__.startswith('2.5.1')"

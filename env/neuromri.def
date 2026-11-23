@@ -1,0 +1,32 @@
+Bootstrap: docker
+From: pytorch/pytorch@sha256:c8268a92a69bd500f8be0e665b2630ee006dadaf7bfbc24249141b15ff622755
+
+%files
+    env/requirements.lock /opt/neuromri/requirements.lock
+
+%post
+    set -eu
+    python -m pip install --no-cache-dir -r /opt/neuromri/requirements.lock
+    # The base image ships a ninja wheel whose platform tag pip check rejects
+    # ("ninja ... is not supported on this platform"); any other finding fails the build.
+    python -m pip check > /opt/neuromri/pip-check.txt 2>&1 || true
+    if grep -v -e '^ninja .* is not supported on this platform' -e '^No broken requirements found' /opt/neuromri/pip-check.txt | grep -q .; then
+        cat /opt/neuromri/pip-check.txt; exit 1
+    fi
+    python -m pip freeze > /opt/neuromri/pip-freeze.txt
+
+%environment
+    export CUBLAS_WORKSPACE_CONFIG=:4096:8
+    export PYTHONHASHSEED=0
+    export XFORMERS_DISABLED=1
+    export HF_HUB_OFFLINE=1
+    export TRANSFORMERS_OFFLINE=1
+    export OMP_NUM_THREADS=4
+    export MKL_NUM_THREADS=4
+
+%labels
+    Description NeuroMRI Vega A100 P1/P2; PyTorch 2.5.1 CUDA 12.4 cuDNN 9
+    BaseTag pytorch/pytorch:2.5.1-cuda12.4-cudnn9-runtime
+
+%test
+    python -c "import torch, torchvision, timm, open_clip, sklearn; assert torch.__version__.startswith('2.5.1')"

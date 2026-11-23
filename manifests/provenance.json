@@ -1,0 +1,34 @@
+{
+  "seed_outer": 4101,
+  "seeds_sampling": [
+    5101,
+    5102,
+    5103
+  ],
+  "normal_mapping": {
+    "AD": 1,
+    "Tumour": 2,
+    "MS": 0
+  },
+  "builder_sklearn": "1.5.2",
+  "builder_sha256": "1a2305cb6bf71849540f0bdc72243644e585ce3a366e37bfcf1d33bf44c67982",
+  "mapping_confidence_meaning": "DINOv2 nearest disease-family share; not per-image ancestry probability",
+  "group_meaning": "audit near-duplicate proxy components, not patients",
+  "p1_p2_test_reuse": "P1 follow-up reuses P2 test outcomes; never call it independent confirmation",
+  "p1_outer_folds": 5,
+  "p1_lean_outer_folds": [
+    0,
+    1,
+    2
+  ],
+  "p2_pool": "heldout half=0; final test half=1",
+  "sources": {
+    "codex_audit/tables/image_inventory.csv": "bacfd93c38dd7d45e343e5f8ce2b015747af189ab681495861491db696502884",
+    "codex_audit/tables/pseudo_groups.csv": "ce066af8d8e9810375a2f0085e4117ec8b439f74baed701b1e6e58292d8d388c",
+    "codex_audit/tables/source_clusters.csv": "ece088504f3e22865e4f8a4176b8fc0e3e43676b4166481a4346693e2a7afa50",
+    "codex_audit/tables/publisher_manifest_join.csv": "994e26ebcc4fb70df4200593df1101728716a63231bbd030d5286a865dfcc490",
+    "rounds/R2/tables/control_mapping.csv": "84f4ad980348a1b2a6e60d84c22187ad99b2edcb425223efd3b32be59090639c"
+  },
+  "n_images": 25963,
+  "excluded": 6
+}

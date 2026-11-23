@@ -1,0 +1,7 @@
+# Install in a NEW --system-site-packages overlay over env/requirements.lock.
+# Never install into the frozen neuromri conda environment.
+nibabel==5.3.2
+importlib_resources==6.5.2
+xlrd==2.0.1
+xxhash==3.5.0
+surfa @ https://github.com/freesurfer/surfa/archive/ca4e26317d3556776268ede7de20752743bf49a2.zip

@@ -1,0 +1,29 @@
+{
+  "NEUROCON": {
+    "counts": {
+      "JSON": 128,
+      "T1": 43,
+      "functional": 85,
+      "TSV": 1
+    },
+    "T1_sidecar_sequences": {
+      "MPRAGE (IR method)": 43
+    },
+    "additional_anatomical_candidates": []
+  },
+  "TAOWU": {
+    "counts": {
+      "JSON": 80,
+      "T1": 40,
+      "functional": 40,
+      "TSV": 1
+    },
+    "T1_sidecar_sequences": {
+      "MPRAGE (IR method)": 40
+    },
+    "additional_anatomical_candidates": []
+  },
+  "conclusion": "No matched-modality E1 possible in these archives: only T1 MPRAGE anatomy and BOLD fMRI; the other files are metadata. BOLD is not substituted for T2/PD/FLAIR anatomy.",
+  "archive_hash_reference": "manifests/external/downloads.csv",
+  "members_csv_sha256": "d4779462f9d700e470269d0f683903e20468301d27c066079c0835094c921f48"
+}

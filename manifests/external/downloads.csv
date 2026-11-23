@@ -1,0 +1,7 @@
+cohort,file,bytes,sha256,url,license
+NEUROCON,NEUROCON/raw/neurocon.tar.gz,1617681469,d33a60bebb1b24986a6ca62151619377ab690ca113ab458d1d9835a5e55d752c,https://fcp-indi.s3.amazonaws.com/data/Projects/INDI/umf_pd/neurocon.tar.gz,CC BY-NC-SA 4.0
+TAOWU,TAOWU/raw/taowu.tar.gz,1436300817,d2fdd980450f881bd45a2f59422ba825f3da65aa0636d061a2292b8a9b149ae7,https://fcp-indi.s3.amazonaws.com/data/Projects/INDI/umf_pd/taowu.tar.gz,CC BY-NC-SA 4.0
+IXI,IXI/raw/IXI-T1.tar,4840816640,56bbe911fbe967f7d1b830a552995263bdba281e0a6eb78e62f1c38d88a946a9,https://biomedic.doc.ic.ac.uk/brain-development/downloads/IXI/IXI-T1.tar,CC BY-SA 3.0
+IXI,IXI/raw/IXI.xls,210432,8880c4417d8c22f9489439f1b8977b1003ed7908be0294e44462aa71c2a3e78f,https://biomedic.doc.ic.ac.uk/brain-development/downloads/IXI/IXI.xls,CC BY-SA 3.0
+ZENODO3935636,ZENODO3935636/raw/Clinical_data.zip,317801,3676479974fb7158395ae8da2f02b5b238c56fc5532521b07eebb1cb06ab80b0,https://zenodo.org/records/3935636/files/Clinical_data.zip?download=1,CC BY 4.0
+ZENODO3935636,ZENODO3935636/raw/T1_preprocessed.zip,5280797009,dfab2b334951b37e19fd61bed351c0a787ddbed36de7c6b93af26a6ed339b8f7,https://zenodo.org/records/3935636/files/T1_preprocessed.zip?download=1,CC BY 4.0
