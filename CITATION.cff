@@ -3,6 +3,7 @@ message: "Please cite the associated manuscript under review."
 type: software
 title: "Control-cohort shortcuts and decision-threshold reliability in deep learning for neurodegenerative MRI"
 version: "0.1.0"
+license: MIT
 abstract: "Reproducibility code for the associated manuscript under review."
 repository-code: "https://github.com/Pakec123/neuromri-control-shortcuts"
 authors:

@@ -185,3 +185,7 @@ their own public commit, configs, data, weights, SIF and output hashes.
 
 No licence file is supplied pending the PI's choice. Dataset/weight terms remain
 separate. The corresponding author's citation metadata is in `CITATION.cff`.
+
+## Licence
+
+Code is released under the MIT License (see `LICENSE`). The datasets are not covered by this licence; each remains under its publisher's terms listed above.
